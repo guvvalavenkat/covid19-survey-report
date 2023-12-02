@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html"; charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+        <meta http-equiv="X-UA-compatible" content="ie=edge"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+            <h1 id="title" class="text-center">
+                Covid-19 Survey Form
+            </h1>
+            <p id="description" class="description text-center">
+            </header>
+            <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">
+                Name
+                </label>
+                <input id="name" type="text" name="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input id="email" type="email" name="name" class="form-control" placeholder="Enter a valid email id" required>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Number<span class="clue"> (optional)</span>
+                </label>
+                <input id="number" type="number" class="form-control" placeholder="Enter your phone number" min=10 max=12>
+            </div>
+            <div class="form-group">
+                <label class="gender-label" for="dropdown">Gender</label>
+                <select class="form-control" id="dropdown" name="gender" required>
+                <option disabled value selected>select your gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Have you meet a person infected by covid-19 virus?</p>
+                <label for="meet">
+                <input name="meet" id="meet" type="radio" value="yes" class="input-label">Yes</label>
+                <label for="meet">
+                <input name="meet" id="meet" type="radio" value="no" class="input-label">No</label>
+                <label for="meet">
+                <input name="meet" id="meet" type="radio" value="not-sure" class="input-label">Not Sure</label>
+            </div>
+            <div class="form-group">
+                <p>What do you like to be improved?<span class="clue"> (check all that apply) </span></p>
+                <label>
+                <input id="improve" type="checkbox" class="input-checkbox" value="internet speed">Internet Speed</label>
+                <label>
+                <input id="improve" type="checkbox" class="input-checkbox" value="Essential Delivery" />Essential Delivery</label>
+                <label>
+                <input id="improve" type="checkbox" class="input-checkbox" value="Testing Amount">Testing Amount</label>
+                <label>
+                <input id="improve" type="checkbox" class="input-checkbox" value="Lockdown Period">Lockdown Period</label>
+                <label>
+                <input id="improve" type="checkbox" class="input-checkbox" value="Police Behaviour">Police Behaviour</label>
+            </div>
+            <div class="form-group">
+                <p>Any comments or Suggestions?</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comments here..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+            </form>
+        </div>
+    </body>
+</html>

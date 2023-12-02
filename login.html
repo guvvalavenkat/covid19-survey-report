@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html"; charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+    <meta http-equiv="X-UA-compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    form {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <script>
+        function sendOTP() {
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            if (mobileNumber) {
+                const otp = Math.floor(100000 + Math.random() * 900000);
+                document.getElementById('otpSection').style.display = 'block';
+                alert(`OTP sent to ${mobileNumber}: ${otp}`);
+            } else {
+                alert('Please enter a valid mobile number');
+            }
+        }
+        function verifyOTP() {
+            const enteredOTP = document.getElementById('otp').value;
+            if (enteredOTP.length === 6 && !isNaN(enteredOTP)) {
+                alert('OTP verified successfully');
+            } else {
+                alert('Invalid OTP. Please enter a valid 6-digit OTP.');
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+    <div>
+        <h2>Enter your mobile number</h2>
+        <input type="tel" id="mobileNumber" placeholder="Enter your mobile number">
+        <button onclick="sendOTP()">Send OTP</button>
+    </div>
+    <div id="otpSection" style="display: none;">
+        <h2>Enter OTP</h2>
+        <input type="text" id="otp" placeholder="Enter OTP">
+        <button onclick="verifyOTP()">Verify OTP</button>
+    </div>
+</body>
+</html>
+
